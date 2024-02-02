@@ -5,6 +5,12 @@ on:
     types: 
       - opened 
   workflow_dispatch: 
+  push: 
+    branches: 
+      - main
+      - dev
+    paths: 
+      - .github/workflow/* 
 jobs:
   test-job:
     runs-on: ubuntu-latest

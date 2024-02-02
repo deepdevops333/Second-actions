@@ -1,6 +1,10 @@
 ---
 name: deploying-actions
-on: push
+on: 
+  pull_request:
+    types: 
+      - opened 
+  workflow_request: 
 jobs:
   test-job:
     runs-on: ubuntu-latest

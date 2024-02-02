@@ -39,5 +39,12 @@ jobs:
         run: npm ci
       - name: Build the code
         run: npm run build
+      - name: code artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: |
+            dist
+            package-json
       - name: deploying the code
         run: echo " deploying the code"
